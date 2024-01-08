@@ -1,33 +1,17 @@
 import { useState } from 'preact/hooks'
-import preactLogo from './assets/preact.svg'
-import viteLogo from '/vite.svg'
-import './app.css'
 
 export function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} class="logo" alt="Vite logo" />
-        </a>
-        <a href="https://preactjs.com" target="_blank">
-          <img src={preactLogo} class="logo preact" alt="Preact logo" />
-        </a>
+      <div className='h-lvh flex flex-col justify-center items-center gap-2'>
+        <span className='text-3xl font-bold text-black font-mono' >
+          OPC Total Tax Calculator
+        </span>
+        <input placeholder='Paste the copied tax here' className='px-6 py-2 border-2 border-black'>Paste the copied tax here</input>
+        <button innerText="Calculate" className='px-4 py-2 hover:text-black text-white text-xl bg-black hover:bg-white font-bold rounded-lg border-black border-2 shadow-lg hover:scale-110 ease-in duration-100'/>
       </div>
-      <h1>Vite + Preact</h1>
-      <div class="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/app.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p class="read-the-docs">
-        Click on the Vite and Preact logos to learn more
-      </p>
     </>
   )
 }
